@@ -1,0 +1,110 @@
+Example responses:
+
+########################################################
+/user/<username>
+{
+  "messages": [
+    {
+      "text": "KfiMxhTOyRxHD3F9JUV0BZ8SDTyalWqFS2tKL8A5msCTJKJ9NC4WPZCvFuPdGM6TDBt5MSpTrHQaMSGRz1TXEsNcmvIKlqXXSjWSUKJwYCAxFNzLDNcTxHtBkJAnawPNAiVfM0STLwCJ", 
+      "pub_date": [
+        "2013-05-08", 
+        "07:59:13"
+      ], 
+      "message_id": 98, 
+      "user_id": 3
+    }, 
+    {
+      "text": "EfIugWQFEKXWZzi0CZmWDxquW5AuWpiDQREUNN4tjKT87UX1DONQTFDEwG6MTTKlQQQNVz3ZEQfh61nSOYDEgQRTH9ik9xSafyRKgDK8VPmNhKzYCLEeA6ZnQX8GAWBDdQQjMlrmYrKO", 
+      "pub_date": [
+        "2013-05-08", 
+        "07:59:06"
+      ], 
+      "message_id": 4, 
+      "user_id": 2
+    }
+  ]
+}
+
+{
+  "message": "User user1 not found"
+}
+
+{
+  "message": ""Search must be less than 140 characters""
+}
+
+
+########################################################
+/user/<username>/followers
+
+{
+  "its_followers": [
+    {
+      "username": "user8", 
+      "id": 8
+    }
+  ]
+}
+{
+  "message": "User user2 not found"
+}
+{
+  "message": "No one is following user2"
+}
+
+########################################################
+/user/<username>/following
+{
+  "user_is_following": [
+    {
+      "username": "user3", 
+      "id": 3
+    }, 
+    {
+      "username": "user4", 
+      "id": 4
+    }
+  ]
+}
+
+{
+  "message": "user2 is following no one."
+}
+{
+  "message": "User user2 not found"
+}
+
+########################################################
+/user/<username>/follow
+{
+  "message": "User user2 not found"
+}
+{
+  "message": "You can't follow yourself"
+}
+{
+  "message": "A user with that token doesn't exist anymore: 9f1a7e2e3e91db0ee09ba2325d3207073287db7c"
+}
+{
+  "message": "You can't follow user2"
+}
+{
+  "message": "user9 started following: user2"
+}
+########################################################
+/user/<username>/follow
+{
+  "message": "User user2 not found"
+}
+{
+  "message": "You can't unfollow yourself"
+}
+{
+  "message": "A user with that token doesn't exist anymore: 9f1a7e2e3e91db0ee09ba2325d3207073287db7c"
+}
+{
+  "message": "You can't unfollow user2"
+}
+{
+  "message": "user9 is now not following: user2"
+}
